@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_10"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ezk"
+        android:gravity="center"
+        android:padding="@dimen/space_25"
+        android:text="@string/changePasswordSuccess"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18" />
+
+    <Button
+        android:id="@+id/btn_customDialog_determine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_determine"
+        android:padding="@dimen/space_10"
+        android:text="@string/confirm"
+        android:textColor="@color/lightgreen"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

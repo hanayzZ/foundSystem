@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray" >
+
+    <!-- 导航title -->
+
+    <RelativeLayout
+        android:id="@+id/rl_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioGroup
+            android:id="@+id/rg_supervise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <com.hanay.foundsystem.base.CustomFontRadioButton
+                android:id="@+id/rb_viewPage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_seek"
+                android:textColor="@drawable/software_textcolor"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.hanay.foundsystem.base.CustomFontRadioButton
+                android:id="@+id/rb_seek"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rb_receive"
+                android:textColor="@drawable/software_textcolor"
+                android:textSize="@dimen/text_size_16" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/rl_navi_show"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_3"
+            android:layout_below="@id/rg_supervise"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/main_navi_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgreen" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_navi_show"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_navi_show"
+            android:background="@color/palegray"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <!-- 空巷 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_seek"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/space_100" />
+    <!-- 拾忆 -->
+
+    <ProgressBar
+        android:id="@+id/pb_supervise"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_seek"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@anim/anim_progressbar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_noUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_seek"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="@dimen/space_10"
+        android:text="@string/noData"
+        android:textColor="@color/lightgreen"
+        android:textSize="@dimen/text_size_20"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_supervise_seek"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_seek"
+        android:listSelector="#00000000"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both" 
+         android:layout_marginBottom="@dimen/space_100"/>
+
+</RelativeLayout>

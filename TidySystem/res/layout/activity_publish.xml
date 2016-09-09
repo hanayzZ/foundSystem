@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_superviseUpload"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palegray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_5"
+        android:background="@color/palegray" >
+
+        <TextView
+            android:id="@+id/tv_publish_back"
+            android:layout_width="@dimen/space_25"
+            android:layout_height="@dimen/space_25"
+            android:layout_marginLeft="@dimen/space_10"
+            android:background="@drawable/ico_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_5"
+        android:background="@drawable/textview_border" >
+
+        <com.hanay.foundsystem.base.CustomFontEditText
+            android:id="@+id/et_topic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="输入话题，30个字以内"
+            android:padding="@dimen/space_5"
+            android:textSize="@dimen/text_size_15"
+            android:visibility="gone" >
+        </com.hanay.foundsystem.base.CustomFontEditText>
+    </RelativeLayout>
+
+    <com.hanay.foundsystem.base.CustomFontEditText
+        android:id="@+id/et_describe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:layout_margin="@dimen/space_5"
+        android:background="@drawable/textview_border"
+        android:gravity="left|top"
+        android:hint="输入你想说的话，150个字以内"
+        android:maxLines="4"
+        android:minLines="4"
+        android:textSize="@dimen/text_size_15" >
+    </com.hanay.foundsystem.base.CustomFontEditText>
+
+    <EditText
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/textview_border"
+        android:textSize="@dimen/text_size_15" />
+
+    <GridView
+        android:id="@+id/noScrollgridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_10"
+        android:horizontalSpacing="@dimen/space_3"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/space_3" >
+    </GridView>
+
+    <Button
+        android:id="@+id/btn_publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_gravity="center"
+        android:background="@drawable/selector_login_btn"
+        android:text="@string/btn_publish"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

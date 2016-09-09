@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray"
+    android:orientation="vertical" >
+
+    <com.hanay.foundsystem.base.CustomFontEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_5"
+        android:layout_marginRight="@dimen/space_5"
+        android:layout_marginTop="@dimen/space_8"
+        android:background="@drawable/fib"
+        android:drawableLeft="@drawable/fm_search_btn"
+        android:drawablePadding="@dimen/space_5"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/activity_supervise_fragment_search"
+        android:inputType="textAutoComplete"
+        android:padding="@dimen/space_5"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_15" >
+    </com.hanay.foundsystem.base.CustomFontEditText>
+
+    <RadioGroup
+        android:id="@+id/rg_supervise"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_5"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.hanay.foundsystem.base.CustomFontRadioButton
+            android:id="@+id/rb_new"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rb_new"
+            android:textColor="@drawable/software_textcolor"
+            android:textSize="@dimen/text_size_16" />
+
+        <com.hanay.foundsystem.base.CustomFontRadioButton
+            android:id="@+id/rb_hit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rb_hit"
+            android:textColor="@drawable/software_textcolor"
+            android:textSize="@dimen/text_size_16" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_navi_show"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_3"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/main_navi_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgreen" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@anim/anim_progressbar"
+            android:layout_gravity="center"
+        android:visibility="gone" />
+     <TextView
+        android:id="@+id/noNewTopic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_gravity="center"
+        android:text="@string/noNewTopic"
+        android:textSize="@dimen/text_size_20"
+        android:visibility="gone" />
+      <TextView
+        android:id="@+id/noHitTopic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:layout_gravity="center"
+        android:text="@string/noHitTopic"
+        android:textSize="@dimen/text_size_20"
+        android:visibility="gone" />
+    <!-- 默认最新话题 -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_newTopic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both" />
+
+    <!-- 最热话题 -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_hitTopic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both" />
+
+</LinearLayout>

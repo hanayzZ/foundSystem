@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_supervise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/palelightgray"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.hanay.foundsystem.base.CustomFontRadioButton
+            android:id="@+id/rb_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/tv_reply"
+            android:textColor="@drawable/software_textcolor"
+            android:textSize="@dimen/text_size_16" />
+
+        <com.hanay.foundsystem.base.CustomFontRadioButton
+            android:id="@+id/rb_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/tv_msg"
+            android:textColor="@drawable/software_textcolor"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_navi_show"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_3"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/main_navi_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgreen"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@anim/anim_progressbar"
+        android:visibility="gone" />
+
+    <com.hanay.foundsystem.base.CustomFontTextView
+        android:id="@+id/noMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="@string/noMsg"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+    
+    <!-- 未登陆提示 -->
+
+    <com.hanay.foundsystem.base.CustomFontTextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:gravity="center_horizontal"
+        android:text="登陆后，别人评论你的状态，给你消息，都会在这里收到通知"
+        android:textSize="@dimen/space_13" />
+    <!-- 未登陆 -->
+
+    <LinearLayout
+        android:id="@+id/ll_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20" >
+
+        <!-- 注册 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="80.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_register_btn"
+                android:text="@string/register" />
+        </RelativeLayout>
+        <!-- 登陆 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="80.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_register_btn"
+                android:text="@string/login" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_reply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_PrivateChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both"
+        android:visibility="gone" />
+
+</LinearLayout>

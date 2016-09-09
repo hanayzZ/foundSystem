@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_listview_item" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/space_50"
+            android:layout_height="@dimen/space_50"
+            android:padding="@dimen/space_5"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_user_cg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.hanay.foundsystem.base.CustomFontTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.hanay.foundsystem.base.CustomFontTextView
+                android:id="@+id/tv_private_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/space_5"
+                android:text="2105-4-13" />
+
+            <com.hanay.foundsystem.base.CustomFontTextView
+                android:id="@+id/tv_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="最新一条信息" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+</RelativeLayout>

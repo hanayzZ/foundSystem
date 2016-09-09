@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray" >
+
+    <FrameLayout
+        android:id="@+id/fl_fragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/main_tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/palelightgray"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_tab_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/selector_tab_home"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <RadioButton
+            android:id="@+id/main_tab_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/selector_tab_topic"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <RadioButton
+            android:id="@+id/main_tab_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/selector_tab_publish"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <RadioButton
+            android:id="@+id/main_tab_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/selector_tab_msg"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <RadioButton
+            android:id="@+id/main_tab_mine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/selector_tab_mine"
+            android:gravity="center_horizontal|center_vertical" />
+    </RadioGroup>
+
+</RelativeLayout>

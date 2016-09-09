@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/pb_supervise"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@anim/anim_progressbar"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_viewPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 官方 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_10" >
+
+                <ImageView
+                    android:id="@+id/iv_designer"
+                    android:layout_width="@dimen/space_20"
+                    android:layout_height="@dimen/space_20"
+                    android:background="@drawable/ico_time" />
+
+                <com.hanay.foundsystem.base.CustomFontTextView
+                    android:id="@+id/tv_designer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_designer"
+                    android:text="拾芥官方发布" />
+            </RelativeLayout>
+              <!-- 图片 -->
+
+            <ImageView
+                android:id="@+id/pagerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+            <!-- 描述 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/space_21" />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:maxLines="50"
+                    android:textSize="@dimen/space_14" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:singleLine="true"
+                    android:textSize="@dimen/space_14" />
+            </LinearLayout>
+          
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

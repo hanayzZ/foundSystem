@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/commonTitleBar_tv_back"
+        android:layout_width="@dimen/space_25"
+        android:layout_height="@dimen/space_25"
+        android:layout_marginLeft="@dimen/space_10"
+        android:background="@drawable/ico_back" />
+    <!-- 关于我们 -->
+
+    <LinearLayout
+        android:id="@+id/ll_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/selector_item_choose"
+        android:orientation="vertical" >
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+    <!-- 修改密码 -->
+
+    <LinearLayout
+        android:id="@+id/ll_mineChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/selector_item_choose"
+        android:orientation="vertical" >
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:text="@string/changePassword"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+    <!-- 注销登陆 -->
+
+    <LinearLayout
+        android:id="@+id/ll_mineLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@drawable/selector_item_choose"
+        android:orientation="vertical" >
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_10"
+            android:text="@string/logOut"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+</LinearLayout>

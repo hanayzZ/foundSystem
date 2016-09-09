@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hanay.foundsystem"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- android:installLocation="auto" -->
+    <!-- 该属性表示程序可能被安装在外部存储介质上(例如:SD Card),但是默认会被安装到手机内存中.当手机内存为空时,程序将被安装到外部存储介质上.当程序安装到手机上后,用户可以决定把程序放在外部储介质还是内存中 -->
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <!-- 百度统计必须申明的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 访问互联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SDCARD读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 网络状态检测权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 允许打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 照片权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name="com.hanay.foundsystem.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+
+        <!-- 百度统计key -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="691c902bc4" />
+        <!-- 百度统计渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="test" />
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+
+        <!-- 百度定位key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UjKrWxVNPBFIdSbqMFOn43XO" />
+
+        <!-- 友盟自动更新key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="54a8d056fd98c5d504000cfc" />
+        <!-- 友盟自动更新渠道 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+        
+        <!-- 导航 -->
+
+        <activity
+            android:name="com.hanay.foundsystem.activity.Activity_QD"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.Activity_HY"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hanay.foundsystem.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hanay.foundsystem.activity.LoginActivity"
+            android:screenOrientation="portrait"
+           >
+        </activity>
+          <activity
+            android:name="com.hanay.foundsystem.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+          >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.TopicStatusesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+           <activity
+            android:name="com.hanay.foundsystem.activity.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.hanay.foundsystem.activity.StatusesInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.SimpleSampleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.UploadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.ImageGridActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hanay.foundsystem.activity.AlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.ImageFileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.ShowAllPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.GalleryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.ChatActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hanay.foundsystem.activity.SetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.hanay.foundsystem.chat.chatServices.ChatService" >
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+          <service
+            android:name="com.hanay.foundsystem.service.NotificationService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.hanay.foundsystem.service.NotificationService" />
+            </intent-filter>
+        </service>
+        
+        
+      
+    </application>
+
+</manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<android.support.v4.view.ViewPager 
+	    android:id="@+id/viewpager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"/>
+	
+	<LinearLayout 
+	    android:id="@+id/hy_layout"
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="54dp">
+	    
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:clickable="true"
+	        android:padding="15dp"
+	      />
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:clickable="true"
+	        android:padding="15dp"
+	      />
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:clickable="true"
+	        android:padding="15dp"
+	        />
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:clickable="true"
+	        android:padding="15dp"
+	       />
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/hy_layout_btn"
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="35dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerVertical="true">
+	    <ImageView 
+	        android:id="@+id/hy_btn"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:clickable="true"
+	        android:layout_gravity="center"/>
+	</LinearLayout>
+</RelativeLayout>

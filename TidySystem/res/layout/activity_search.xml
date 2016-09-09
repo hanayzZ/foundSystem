@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palelightgray" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10" >
+
+        <com.hanay.foundsystem.base.CustomFontEditText
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:layout_marginRight="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_weight="1"
+            android:background="@drawable/fib"
+            android:drawableLeft="@drawable/fm_search_btn"
+            android:drawablePadding="@dimen/space_5"
+            android:ems="10"
+            android:hint="@string/activity_supervise_fragment_search"
+            android:inputType="textAutoComplete"
+            android:padding="@dimen/space_5"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_15" >
+        </com.hanay.foundsystem.base.CustomFontEditText>
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:id="@+id/query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:background="@drawable/selector_query_btn"
+            android:gravity="center_horizontal"
+            android:text="@string/query"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="both" />
+
+    <TextView
+        android:id="@+id/activity_search_supervise_no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:gravity="center"
+        android:text="@string/activity_search_supervise_no"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_20"
+        android:visibility="gone" />
+
+</RelativeLayout>

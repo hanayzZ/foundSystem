@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:id="@+id/tv_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.hanay.foundsystem.base.CustomFontTextView
+            android:id="@+id/tv_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/space_30"
+        android:layout_height="@dimen/space_30"
+        android:layout_marginLeft="@dimen/space_50"
+        android:layout_toRightOf="@id/ll_topic"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ico_delete_private"
+        android:visibility="gone" /> -->
+
+</RelativeLayout>
